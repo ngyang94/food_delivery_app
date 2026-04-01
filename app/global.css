@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .offer-card {
+    @apply w-full h-[200px] rounded-lg;
+  }
+  .offfer-card__info {
+    @apply flex-1 justify-center items-center;
+  }
+  .cart-btn {
+    @apply w-[30px] h-[30px] bg-white border rounded-full justify-center items-center;
+  }
+  .cart-badge {
+    @apply absolute -top-1 -right-1 w-[14px] h-[14px] bg-orange-300 rounded-full;
+  }
+}
