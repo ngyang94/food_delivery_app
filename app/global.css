@@ -6,7 +6,7 @@
   .offer-card {
     @apply w-full h-[200px] rounded-lg;
   }
-  .offfer-card__info {
+  .offer-card__info {
     @apply flex-1 justify-center items-center;
   }
   .cart-btn {
@@ -14,5 +14,17 @@
   }
   .cart-badge {
     @apply absolute -top-1 -right-1 w-[14px] h-[14px] bg-orange-300 rounded-full;
+  }
+  .custom-btn {
+    @apply bg-orange-500 py-4 px-8 rounded-3xl justify-center items-center;
+  }
+  .paragraph-semibold {
+    @apply font-semibold;
+  }
+  .base-regular {
+    @apply font-quicksand;
+  }
+  .base-bold {
+    @apply font-quicksand-bold;
   }
 }
