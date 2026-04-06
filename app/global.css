@@ -27,4 +27,7 @@
   .base-bold {
     @apply font-quicksand-bold;
   }
+  .tab-icon {
+    @apply w-[50px] h-[20px] justify-center items-center absolute -bottom-3;
+  }
 }

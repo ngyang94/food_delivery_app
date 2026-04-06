@@ -13,9 +13,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../state/store";
 
 export default function _Layout() {
-  const auth = useSelector<RootState, AuthState>((state) => {
-    state.auth;
-  });
+  const auth = useSelector<RootState, AuthState>((state) => state.auth);
   if (auth.isAuthenticated) {
     return <Redirect href="/" />;
   }
