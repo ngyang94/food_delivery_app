@@ -12,8 +12,9 @@ a demo food delivery app build using expo with hardcoded data, built by refering
 ## Usage
 
 - search for food by keyword or category
-- add food order to cart
+- add, edit and remove food order to cart
 - place food order
+- edit profile
 
 ## Tech
 - Expo
