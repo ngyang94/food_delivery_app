@@ -19,4 +19,38 @@ interface CustomButtonProps {
 interface AuthState {
   isAuthenticated: boolean;
   username: string;
+  email: string;
+  phone: string;
+  address1: string;
+  address2: string;
+}
+
+interface MenuItem {
+  id: string;
+  image: ImageSourcePropType;
+  name: string;
+  category: string;
+  price: number;
+}
+
+interface MenuProp {
+  menu: MenuItem[];
+}
+interface categoryItem {
+  id: string;
+  name: string;
+}
+interface categoriesProp {
+  categories: categoryItem[];
+}
+
+interface CartItem {
+  menu: MenuItem;
+  amount: number;
+}
+
+interface CartProp {
+  cart: CartItem[];
+  totalPrice: number;
+  totalItems: number;
 }

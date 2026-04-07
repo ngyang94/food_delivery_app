@@ -1,9 +1,13 @@
-import { userList } from "@/app/dummy_data/dummy_data";
+import { userList } from "@/constant/userData";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: AuthState = {
   isAuthenticated: false,
   username: "",
+  email: "",
+  phone: "",
+  address1: "",
+  address2: "",
 };
 
 const authSlice = createSlice({
@@ -11,26 +15,40 @@ const authSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(
-      loginAsync.fulfilled,
-      (
-        state,
-        action: PayloadAction<{
-          email: string;
-          password: string;
-          name: string;
-        }>,
-      ) => {
-        // console.log("got do1");
-        // console.log(action.payload);
-        // console.log(state);
-        if (!!action.payload) {
-          state.isAuthenticated = true;
-          state.username = action.payload.name;
-          //   console.log(state);
-        }
-      },
-    );
+    builder
+      .addCase(
+        loginAsync.fulfilled,
+        (
+          state,
+          action: PayloadAction<{
+            id: number;
+            email: string;
+            password: string;
+            name: string;
+            phone: string;
+            address1: string;
+            address2: string;
+          }>,
+        ) => {
+          if (!!action.payload) {
+            state.isAuthenticated = true;
+            state.username = action.payload.name;
+            state.email = action.payload.email;
+            state.phone = action.payload.phone;
+            state.address1 = action.payload.address1;
+            state.address2 = action.payload.address2;
+          }
+        },
+      )
+      .addCase(
+        logoutAsync.fulfilled,
+        (state, actions: PayloadAction<boolean>) => {
+          if (actions.payload) {
+            state.isAuthenticated = false;
+            state.username = "";
+          }
+        },
+      );
   },
 });
 
@@ -42,6 +60,9 @@ export const loginAsync = createAsyncThunk(
       email: string;
       password: string;
       name: string;
+      phone: string;
+      address1: string;
+      address2: string;
     }>((resolve, reject) => {
       setTimeout(() => {
         userList.find((user) => {
@@ -58,5 +79,13 @@ export const loginAsync = createAsyncThunk(
     });
   },
 );
+
+export const logoutAsync = createAsyncThunk("auth/logoutAsync", async () => {
+  return new Promise<boolean>((resolve, reject) => {
+    setTimeout(() => {
+      resolve(true);
+    }, 2000);
+  });
+});
 
 export default authSlice.reducer;

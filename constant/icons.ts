@@ -1,7 +1,14 @@
 export const arrowDown = require("../assets/icons/arrowDown.png");
 export const arrowRight = require("../assets/icons/arrowRight.png");
+export const arrowLeft = require("../assets/icons/arrowLeft.png");
 export const bag = require("../assets/icons/bag.png");
 export const home = require("../assets/icons/home.png");
 export const search = require("../assets/icons/search.png");
 export const cart = require("../assets/icons/cart.png");
 export const profile = require("../assets/icons/profile.png");
+export const trash = require("../assets/icons/delete.png");
+export const pencil = require("../assets/icons/edit.png");
+export const email = require("../assets/icons/email.png");
+export const phone = require("../assets/icons/telephone.png");
+export const location = require("../assets/icons/location.png");
+export const emptyCart = require("../assets/icons/empty-cart.png");

@@ -3,7 +3,7 @@ import CustomInput from "@/components/CustomInput";
 import { Link, router } from "expo-router";
 import { useState } from "react";
 import { Alert, Text, View } from "react-native";
-import { userList } from "../dummy_data/dummy_data";
+import { userList } from "../../constant/userData";
 
 export default function SignUp() {
   const [isSubmitting, setIsSubmitting] = useState(false);

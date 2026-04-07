@@ -1,3 +1,4 @@
+// not used becoz changed plan to do with dummy data, put here for decoration only
 import { useEffect, useState } from "react";
 import api from "../api/api";
 
