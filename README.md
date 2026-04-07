@@ -11,12 +11,15 @@ a demo food delivery app build using expo with hardcoded data, built by refering
 
 ## Usage
 
+- login user, with hardcoded email="ng@email.com" and password="ng123"
+- register new user
 - search for food by keyword or category
 - add, edit and remove food order to cart
 - place food order
 - edit profile
 
 ## Tech
+
 - Expo
 - React Native
 - Redux
